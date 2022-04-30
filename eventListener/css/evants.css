@@ -1,0 +1,15 @@
+.btn-click-me {
+  background-color: rgb(211, 76, 27);
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 10%;
+  height: 20%;
+  border: 0;
+  padding: 0.3rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+button:hover {
+    background-color: rgb(255, 68, 0);
+}

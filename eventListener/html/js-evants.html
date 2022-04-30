@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/eventListener/css/evants.css" />
+    <title>Js-Events and eventListener</title>
+  </head>
+  <body>
+    <h1>today our js evants day, we gonna go to click me</h1>
+    <button id="click" class="btn-click-me">Click Me</button>
+    <script>
+      // click me button evants
+      document.getElementById("click").addEventListener(
+        "click",
+        function () {
+          alert("You click me yeah!!");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
