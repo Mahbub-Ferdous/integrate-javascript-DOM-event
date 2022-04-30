@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <header>
+      <h1>welcome to my blog websit</h1>
+      <div class="margin-left-auto">
+        <ul id="navbar" class="flex">
+          <li><a href="">Home</a></li>
+          <li><a href="">Producs</a></li>
+          <li><a href="">Service</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="all-sec">
+      <section id="section" class="first-sec">
+        <article class="blog">
+          <h3>Blogs - 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            ratione deserunt vitae, consectetur quas ab beatae praesentium alias
+            ut ullam, a officiis eligendi, qui temporibus impedit et repellat
+            rerum consequatur.
+          </p>
+        </article>
+        <article id="second-article" class="blog">
+          <h3 id="second-title">Blogs - 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta enim
+            reprehenderit facere perferendis laudantium incidunt facilis eum
+            amet accusamus debitis consequuntur, cum voluptatem perspiciatis
+            obcaecati impedit placeat suscipit quo accusantium!
+          </p>
+        </article>
+        <article class="blog">
+          <h3>Blogs - 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+            repudiandae enim, veniam saepe exercitationem non dolores
+            voluptatibus est odit perspiciatis rem sunt, ad nemo eaque maxime.
+            Quod cum voluptatem delectus!
+          </p>
+        </article>
+        <article id="important" class="blog">
+          <h3>Blogs - 4</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+            repudiandae enim, veniam saepe exercitationem non dolores
+            voluptatibus est odit perspiciatis rem sunt, ad nemo eaque maxime.
+            Quod cum voluptatem delectus!
+          </p>
+        </article>
+      </section>
+    </main>
+    <script src="../js/getElementByTagName.js"></script>
+    <script src="../js/getElementById.js"></script>
+
+    <!-- <script src="../js/querySelector.js"></script> -->
+    <!-- <script src="..//js/querySelectorAll.js"></script> -->
+    <!-- create and add elements by using js: -->
+    <script>
+      // create the elements
+      const li = document.createElement("li"); // we declared a variable and call function createElement('which html elements i will create like li or anchor')
+      li.innerText = "About Us"; // writings tags innerText
+      // append elements on parent chid ul
+      const ul = document.getElementById("navbar"); // and we call by using id and than append our creteElements varibles
+      ul.appendChild(li); /// we can add successfully by using js append
+      const thired = ul.children[2];       // like array method 
+      ul.removeChild(thired);             /// service which is index of 2 will be remove 
+
+      // article appending by using createElements call getElementById and append
+      const article = document.createElement("article");
+      const h3 = document.createElement("h3"); // add this in articles child
+      h3.innerText = "My Awesome Blogs - 5";
+      const p = document.createElement("p"); /// this also add child of article
+      p.innerText =
+        "lorem ipsuma kallu lallu mallu dallu hala kalal jalala malalala you arer my dulal";
+      article.appendChild(h3);
+      article.appendChild(p);
+
+      const addBlogs = document.getElementById("section"); // id dhore tene niye aslam and append chid kore dilam
+      addBlogs.appendChild(article); /// why this not work cause we ad style before and those code ar execute fast than this we have no class with blogs in this reason we add attribute class = blog than execute those past code under this code
+      article.setAttribute("class", "blog");
+
+      // add html by using id
+      const important = document.getElementById("important");
+      important.innerHTML = `
+        <h3>My super duper blogs - 4 </h3>
+        <p>why this not work cause we ad style before and those code ar execute fast than this we have no class with blogs in this reason we add attribute class = blog than execute those past code under this code</p>
+        <h4>Another sub blogs list given below:</h4>
+        <div>
+          <ul>
+            <li>Cox's Bazar Blog</li>
+            <li>Sundarban Blogs</li>
+          </ul>
+        </div>
+      `;
+
+      /// create and add html elements by using js again:
+      const add = document.createElement("article"); // we create a html element article
+      add.setAttribute("class", "blog"); /// we set class attribute which name is blog for same style .
+      add.innerHTML = `
+        <h3>My Awesome Blog - 6</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+            repudiandae enim, veniam saepe exercitationem non dolores
+            voluptatibus est odit perspiciatis rem sunt, ad nemo eaque maxime.
+            Quod cum voluptatem delectus!</p>
+      `; // we can change one or more innerHTML by using carot sign
+      const section = document.getElementById("section"); // we call the parentElement by using ID for appendChild our creted js html element
+      section.appendChild(add); /// apeend the element in section id parentElement
+    </script>
+    <script src="../js/getElementsByClassName.js"></script>
+  </body>
+</html>

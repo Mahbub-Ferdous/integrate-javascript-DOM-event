@@ -1,0 +1,31 @@
+/* body {
+  background-color: aquamarine;
+}
+.color {
+  color: rgb(61, 38, 8);
+} */
+/* #second-title {
+  background-color: blueviolet;
+  color: #ffffff;
+} */
+/* .blogs {
+  border: 0.3rem solid orangered;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+} */
+
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.margin-left-auto {
+  margin-left: 50%;
+}
