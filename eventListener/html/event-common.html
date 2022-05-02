@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="clicking-method"></p>
+    <input type="text" name="" id="nameField" />
+    <button id="btn-update">Update</button>
+    <button onclick="handleJustFunction()">just function</button>
+    <button id="maily-used-event-system">direct add event listener</button>
+    <script>
+      // just function and we add attribute onclick on html element and than call our function which wrote inside the script tag
+      function handleJustFunction() {
+        const clickingMethod = document.getElementById("clicking-method");
+        clickingMethod.innerText = "this is just function for evant handler";
+      }
+
+      // we mainly use direcly event listener
+      document
+        .getElementById("maily-used-event-system")
+        .addEventListener("click", function () {
+          const p = document.getElementById("clicking-method");
+          p.innerHTML = "<p>this is from direct addEvantListener uses</p>";
+        });
+      // another direct event listener using input item:
+      document
+        .getElementById("btn-update")                              // when we click update button that will be happens
+        .addEventListener("click", function () {
+          const p = document.getElementById("clicking-method");      // name will updated and print by using p tag id
+          p.innerText = nameField.value;          /// we can use idName.value for input field 
+          nameField.value = '';                  // it is for clear the text in input box
+        });
+    </script>
+  </body>
+</html>

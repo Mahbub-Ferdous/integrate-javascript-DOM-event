@@ -14,6 +14,7 @@
 12. catch by selector with child and more = document.querySelectorAll('.className/#idName childTagName');
 13. set html attribute = document.setAttribute('attributeName','value');
 14. get html attribute = document.getAttribute('attributeName'); we can find attributeName
+14.1 remove attribute = document.getElementById('idName').removeAttribute('attributeName')
 15. get parentNode = document.parentNode more parent = document.parentNode.parentNode
 16. you can also find childNode
 17. you can create html element by using = document.createElements('htmlElementName')

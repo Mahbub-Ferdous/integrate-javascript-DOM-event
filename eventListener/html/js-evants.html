@@ -8,17 +8,64 @@
     <title>Js-Events and eventListener</title>
   </head>
   <body>
-    <h1>today our js evants day, we gonna go to click me</h1>
+    <h1 onclick="alert('valo hoye jao masud')">
+      <!--we get directly alert from onclick-->
+      <!-- we can write many ways to getting an evants-->
+      today our js evants day, we gonna go to click me
+      <!--  -->
+    </h1>
     <button id="click" class="btn-click-me">Click Me</button>
+    <!-- we can use script tag to write vanilla javascrip-->
+    <button onclick="document.body.style.backgroundColor='yellow'">
+      Click Me: yellow
+    </button>
+    <button onclick="makeRed()">Click Me: red</button>
+    <!-- we write a function in script tag and than call it on - onclick evants-->
+    <button id="btn-blue">Click Me: blue</button>
+    <button id="btn-green">Click Me: Green</button>
+    <button id="btn-orange">Click Me: orange</button>
+
+    <!-- <script src="/eventListener/js/onClick.js"></script> -->
     <script>
-      // click me button evants
+      // write a function
+      function makeRed() {
+        document.body.style.backgroundColor = "red";
+      }
+
+      // getting an events by using id
+      const blue = document.getElementById("btn-blue");
+      blue.onclick = makeBlue; // we call our blue function just set the name of function
+      // make a function for blue
+      function makeBlue() {
+        document.body.style.backgroundColor = "blue";
+      }
+      // handle events by using anonymus function  :
+
+      const greenBtn = document.getElementById("btn-green"); // we write directly on function in  a variable
+      // console.log(greenBtn);   /// please always check by using console.log
+      // this is called anonymus function :
+      greenBtn.onclick = function () {
+        /// we do not use the name of function if we do not use this function again
+        document.body.style.backgroundColor = "green";
+      };
+
+      /* // handle event by using addEventListener
+
+      const orange = document.getElementById("btn-orange");
+      orange.addEventListener("click", orange);
+      function orange() {
+        document.body.style.backgroundColor = "orange";
+      } */
+
+      // click me button evants with bubble evants
+      // bubble evants structure = document.getElementById('idName').addEventListener('type', listener, userCapture) where type is event type and listener is specific function and userCapture always false .
       document.getElementById("click").addEventListener(
         "click",
         function () {
           alert("You click me yeah!!");
         },
         false
-      );
+      ); 
     </script>
   </body>
 </html>
