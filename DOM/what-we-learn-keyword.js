@@ -19,6 +19,6 @@
 16. you can also find childNode
 17. you can create html element by using = document.createElements('htmlElementName')
 18. than you append this like =variableName.appendChild(variableName);
-
-
+19. we can remove attribute by using remove attribute = variableName.removeAttribute;
+20. we can remove child elements by using remove child = variableName.removeChild;
 */

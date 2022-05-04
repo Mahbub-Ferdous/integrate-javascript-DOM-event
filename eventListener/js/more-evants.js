@@ -41,7 +41,7 @@ document
 document
   .getElementById("delete-confirm")
   .addEventListener("keyup", function (event) {
-    /// add a event parameter to catch all property
+    /// add a event parameter to catch all types of event functionality and event element value
     const deleteBtn = document.getElementById("del-btn");
     if (event.target.value == "delete" || event.target.value == "Delete") {
       deleteBtn.removeAttribute("disabled");
