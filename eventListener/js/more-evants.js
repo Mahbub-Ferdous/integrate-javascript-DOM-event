@@ -22,7 +22,7 @@ document
 // blur
 document.getElementById("delete-confirm").addEventListener("blur", function () {
   document.body.style.backgroundColor = "white";
-}); // when we click outside the input field but any point of html body than input field will no in focus so it is called blur and when it will blur the whole body background color will be turn into white
+}); // when we click outside the input field but any point of html body than input field will no longer in focus so it is called blur and when it will blur the whole body background color will be turn into white
 /* // keydown events:
 document
   .getElementById("delete-confirm")
@@ -48,7 +48,7 @@ document
     } else {
       deleteBtn.setAttribute("disabled", "true");
     }
-  }); /// when we write delete properly the delete button turn disabled to active so we use
+  }); /// when we write delete properly the delete button turn disabled to active so we use it to delete our desire things 
 // change events:
 document
   .getElementById("delete-confirm")
