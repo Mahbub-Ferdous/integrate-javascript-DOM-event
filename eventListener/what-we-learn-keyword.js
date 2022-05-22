@@ -21,4 +21,8 @@
 19. what is event delegate ??
 ====>>> event delegate means deleting or removing elements by using event functionality and we cant remove indivisually by id we deleting by using paremNodes or className etc which are common for us like the reverse method of bubble event, bubble event start with parent than scatter all parent child class but delegate works reverse class to catch parent nodes and execution will be same 
 20. mouse event name = 1.mousemove, 2.mouseenter , 3.mouseout 
+
+21. if we add class in createElements by using javascript we use set attribute also we use 'classList.add(className)'
 */
+
+
